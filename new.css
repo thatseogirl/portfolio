@@ -67,7 +67,7 @@ section .title::before{
 }
 section .title::after{
     position: absolute;
-    bottom: -8px;
+    bottom: -35px;
     left: 50%;
     font-size: 20px;
     color: crimson;
@@ -250,11 +250,6 @@ section .title::after{
     color: crimson;
     background: none;
 }
-.serv-content{
-    display: flex;
-    justify-content: center;
-    
-}
 .services{
     background: none;
 }
@@ -271,45 +266,58 @@ section .title::after{
     background: #111;
     content: "what i provide";
 }
-.services .serv-content .card{
-    width: 30%;
+
+ .seo, .content{
+    width: 35%;
+    height: 300px;
     background: #222;
     text-align: center;
     padding: 20px;
-    padding-right: 20px;
-    margin-right: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover{
+.content{
+    position: relative;
+    left: 530px;
+    bottom: 195px;
+}
+.seo{
+    position: relative;
+    top: 110px;
+    left: 50px;
+}
+
+.services .serv .seo:hover, .content:hover{
     background: crimson;
 }
-.services .serv-content .card .box{
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
-}
-.services .serv-content .card i{
+
+.services .serv .seo i{
     font-size: 50px;
     color: crimson;
     transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i{
+.services .serv .content i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.services .serv .seo:hover i{
     color: #fff;
 }
-.services .serv-content .card .text{
+.services .serv .content:hover i{
     color: #fff;
-    font-size: 18px;
+}
+.services .text{
+    color: #fff;
+    font-size: 20px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.card p{
+.serv p{
     color: #fff;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 13px;
 }
-
 
 .projects .title::after{
     content: "what i do";
@@ -395,25 +403,32 @@ footer span a:hover{
 
 @media (max-width: 1300px) {
     .home .max-width{
-        margin-left: 0px;
+        margin-left: 0px;  
+        width: 80%;
     }
 }
 
-@media (max-width: 1104px) {
-    .services .serv-content .card{
-        width: calc(40% - 10px);
-        margin-bottom: 20px;
-    }
-}
+
 
 @media (max-width: 991px) {
     .max-width{
         padding: 0 50px;
+        width: 80%;  
     }
-    .services .serv-content .card{
-        width: calc(40% - 10px);
-        margin-bottom: 20px;
+    .seo{
+        width: 80%;
+        height: 350px;
+        position: relative;
+        top: 50%;
     }
+    .content{
+        width: 80%;
+        height: 350px;
+        position: relative;
+        top: 40px;
+        left: 48px;
+    }
+    
     
 }
 @media (max-width: 947px){
@@ -470,18 +485,17 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .services .serv-content .card{
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
+    
     .about .about-content .left img{
         display: none;
     }
 }
 
 @media (max-width: 690px) {
+    
     .max-width{
         padding: 0 23px;
+        width: 80%;
     }
     .home .home-content .text-2{
         font-size: 60px;
@@ -492,8 +506,18 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .services .serv-content .card{
-        width: 100%;
+    .seo{
+        width: 80%;
+        height: 350px;
+        position: relative;
+        top: 50%;
+    }
+    .content{
+        width: 80%;
+        height: 350px;
+        position: relative;
+        top: 40px;
+        left: 48px;
     }
     .about .about-content .left img{
         display: none;
@@ -521,4 +545,5 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
+    
 }
