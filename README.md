@@ -3,4 +3,4 @@
 
 This project was created with HTML, CSS AND JAVASCRIPT.
 
-Its a showcase of all my projects.
+It's an overview  of all my projects.
